@@ -36,7 +36,7 @@ for index in range(len(pdbs)):
 	pymol.cmd.select("zincos", "symbol ZN")
 	pymol.cmd.select("pocket", "all within 7.5 of zincos")
 	pymol.cmd.remove("symbol li+na+k+mg+sr+be+fe+ca+ag+pt+hg+co+au+ni+cd")
-	pymol.cmd.remove("resname SO4 resname CO3 resname PO4 resname AZI resname CL")
+	pymol.cmd.remove("resname SO4+CO3+PO4+AZI+CL")
 	pymol.cmd.remove("solvent beyond 15 of zincos")
 	pymol.cmd.delete("zincos")
 	pymol.cmd.remove("not (alt ''+A)")
